@@ -1,0 +1,36 @@
+<div class="small-container">
+    <div class="row row-2">
+        <h2>CAKES</h2>
+        <select>
+            <option>Default Sort</option>
+            <option>Sort By Price</option>
+            <option>Sort By Popularity</option>
+            <option>Sort By Rating</option>
+            <option>Sort By type</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-4" *ngFor="let c of cakes">
+            <a href=""[routerLink]="['/cakes',c.id]" ><img src="http://127.0.0.1:8000/{{c.image}}"></a>
+            <h4>{{c.flavour}}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>{{c.price}}</p>
+        </div>
+        
+        
+    </div>
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+</div>
